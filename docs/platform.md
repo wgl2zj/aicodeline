@@ -16,7 +16,7 @@ ZCode 原生满足以上全部。Claude Code 的 Task/Skill 结构接近但未�
 **仅支持 ZCode**,依赖其动态工作流(dynamic-workflows)能力:
 
 - `CreateWorkflow`:脚本化编排,阶段图(phase)与确认框;
-- **per-agent 模型指定**(`agent(name, { model })` + `model()` 名册,启动锁定)——三路审查的异构性由此成立,这是工作流版的硬前提;
+- **per-agent 模型指定**(`agent(name, { model })` + `model()` 名册,启动锁定;模型 id 可附 `$<level>` 指定思考强度,默认各模型最高档)——三路审查的异构性由此成立,这是工作流版的硬前提;
 - **escalation 与 ResolveWorkflowQuestion**:子智能体运行中直问管理员——替代派发引擎的 QA 停机轮转;
 - `world.run` 确定性命令闸门(exit code 可分支);
 - **AmendWorkflow / ResumeWorkflowRun**:失败后的缓存回放与续跑;
